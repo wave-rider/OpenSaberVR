@@ -147,6 +147,7 @@ namespace VRTK
 
         protected virtual string ScrapeHeadsetType()
         {
+            /*
             string model = CleanPropertyString(XRDevice.model);
             string deviceName = CleanPropertyString(XRSettings.loadedDeviceName);
             switch (model)
@@ -180,6 +181,8 @@ namespace VRTK
                 case "acermixedreality":
                     return CleanPropertyString("windowsmixedreality");
             }
+            return "";
+            */
             return "";
         }
 

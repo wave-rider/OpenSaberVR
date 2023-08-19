@@ -63,6 +63,7 @@ public class SteamVR_Settings : EditorWindow
 
 	static void Update()
 	{
+		/*
 		bool show =
 			(!EditorPrefs.HasKey(ignore + buildTarget) &&
 				EditorUserBuildSettings.activeBuildTarget != recommended_BuildTarget) ||
@@ -176,6 +177,7 @@ public class SteamVR_Settings : EditorWindow
 		}
 
 		EditorApplication.update -= Update;
+		*/
 	}
 
 	Vector2 scrollPosition;

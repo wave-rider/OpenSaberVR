@@ -50,6 +50,7 @@ namespace VRTK
 
         private void RefreshData()
         {
+            /*
             stringBuilder.Length = 0;
 
             Assembly editorAssembly = typeof(VRTK_SDKManagerEditor).Assembly;
@@ -155,6 +156,7 @@ namespace VRTK
             );
 
             stringBuilder.Length--;
+            */
         }
 
         private void Append(string value, Action sectionContentAction = null)
@@ -178,5 +180,6 @@ namespace VRTK
         {
             Append(string.Format("{0}: {1}", tag, value));
         }
+        
     }
 }

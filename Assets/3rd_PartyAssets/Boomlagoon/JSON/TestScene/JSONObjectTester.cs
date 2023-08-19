@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JSONObjectTester : MonoBehaviour {
 
-	public GUIText infoText;
+	//public GUIText infoText;
 
 	private string stringToEvaluate = @"{""web-app"": {
   ""servlet"": [   
@@ -96,7 +96,7 @@ public class JSONObjectTester : MonoBehaviour {
     ""taglib-location"": ""/WEB-INF/tlds/cofax.tld""}}}";
 
 	void Start() {
-		infoText.gameObject.active = false;
+		//infoText.gameObject.active = false;
 
 		//JSONObject usage example:
 
