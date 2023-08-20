@@ -48,7 +48,7 @@ public class LoadSongInfos : MonoBehaviour
                     song.AuthorName = infoFile.GetString("_songAuthorName");
                     song.BPM = infoFile.GetNumber("_beatsPerMinute").ToString();
                     song.CoverImagePath = Path.Combine(dir, infoFile.GetString("_coverImageFilename"));
-                    song.AudioFilePath = Path.Combine(dir, infoFile.GetString("_songFilename"));
+                    song.AudioFilePath = "file://"+Path.Combine(dir, infoFile.GetString("_songFilename"));
                     song.Difficulties = new List<string>();
 
                     var difficultyBeatmapSets = infoFile.GetArray("_difficultyBeatmapSets");

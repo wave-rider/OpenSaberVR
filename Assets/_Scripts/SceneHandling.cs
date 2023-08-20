@@ -49,6 +49,7 @@ public class SceneHandling : MonoBehaviour
         if (!VRTK_Loaded)
             return;
 
+return;
         LeftSaber.SetActive(false);
         LeftShaft.SetActive(false);
         
@@ -62,6 +63,7 @@ public class SceneHandling : MonoBehaviour
 
     private void SaberSceneLoaded()
     {
+        return;
         LeftSaber.SetActive(true);
         LeftShaft.SetActive(true);
 

@@ -66,6 +66,7 @@ public class MainMenu : MonoBehaviour
 
     public IEnumerator PreviewSong(string audioFilePath)
     {
+        Debug.Log(Songsettings.CurrentSong.AudioFilePath);
         SongPreview.Stop();
         PreviewAudioClip = null;
         PlayNewPreview = true;
