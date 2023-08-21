@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using VRTK;
 
 public class Saber : MonoBehaviour
 {
@@ -10,20 +9,23 @@ public class Saber : MonoBehaviour
     private float impactMagnifier = 120f;
     private float collisionForce = 0f;
     private float maxCollisionForce = 4000f;
-    private VRTK_ControllerReference controllerReference;
+    //private VRTK_ControllerReference controllerReference;
 
     private void Start()
     {
         slicer = GetComponentInChildren<Slice>(true);
-        var controllerEvent = GetComponentInChildren<VRTK_ControllerEvents>(true);
+        //var controllerEvent = GetComponentInChildren<VRTK_ControllerEvents>(true);
+        /*
         if (controllerEvent != null && controllerEvent.gameObject != null)
         {
             controllerReference = VRTK_ControllerReference.GetControllerReference(controllerEvent.gameObject);
         }
+        */
     }
 
     private void Pulse()
     {
+        /*
         if (VRTK_ControllerReference.IsValid(controllerReference))
         {
             collisionForce = VRTK_DeviceFinder.GetControllerVelocity(controllerReference).magnitude * impactMagnifier;
@@ -38,6 +40,7 @@ public class Saber : MonoBehaviour
                 controllerReference = VRTK_ControllerReference.GetControllerReference(controllerEvent.gameObject);
             }
         }
+        */
     }
 
     void Update()
