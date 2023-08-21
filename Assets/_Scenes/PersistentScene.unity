@@ -966,6 +966,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8801419625702658927, guid: 59aba35d4aaf74f6e910083f43bfa3d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8801419627318951575, guid: 59aba35d4aaf74f6e910083f43bfa3d8,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2397,6 +2402,27 @@ Transform:
   m_Father: {fileID: 1064304045}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2023034493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8801419627318951574, guid: 59aba35d4aaf74f6e910083f43bfa3d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 499844401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023034499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023034493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7a372867f15de4b8e04325d51f52d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &2072910730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2466,6 +2492,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 345fb501316e848a3b0c3076f6d0911b, type: 3}
+--- !u!1 &2102632779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8801419625702658927, guid: 59aba35d4aaf74f6e910083f43bfa3d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 499844401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2102632785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102632779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7a372867f15de4b8e04325d51f52d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &2141932675
 GameObject:
   m_ObjectHideFlags: 0
