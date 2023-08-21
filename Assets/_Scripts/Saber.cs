@@ -1,16 +1,25 @@
-﻿using UnityEngine;
+﻿using Unity.Mathematics;
+using UnityEngine;
 
 public class Saber : MonoBehaviour
 {
     public LayerMask layer;
     private Vector3 previousPos;
+    private Vector3 posDelta;
     private Slice slicer;
 
     private float impactMagnifier = 120f;
     private float collisionForce = 0f;
     private float maxCollisionForce = 4000f;
     //private VRTK_ControllerReference controllerReference;
-
+    public GameObject[] SaberMeshes;
+    public void SetSaberVisibility(bool x)
+    {
+        for (int i = 0; i < SaberMeshes.Length; i++)
+        {
+            SaberMeshes[i].SetActive(x);
+        }
+    }
     private void Start()
     {
         slicer = GetComponentInChildren<Slice>(true);
@@ -66,7 +75,15 @@ public class Saber : MonoBehaviour
                 }
             }
         }
+
         
+
+        if(previousPos!=transform.position){
+            posDelta = previousPos-transform.position;
+            slicer.transform.localRotation = Quaternion.LookRotation(Vector3.forward, posDelta)*Quaternion.Euler(0, 0, 90);
+        }
+        
+
         previousPos = transform.position;
     }
 

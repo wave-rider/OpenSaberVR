@@ -36,5 +36,9 @@ public class CubeHandling : MonoBehaviour
             // Standard moving.
             transform.position -= transform.forward * Speed * (Time.deltaTime);           
         }
+
+        
+            
+        
     }
 }

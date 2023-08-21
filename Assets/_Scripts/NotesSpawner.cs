@@ -137,6 +137,10 @@ public class NotesSpawner : MonoBehaviour
         audioSource.clip = DownloadHandlerAudioClip.GetContent(uwr);
         audioLoaded = true;
     }
+    [ContextMenu("loadmenu")]
+    public void LoadBackMenu(){
+StartCoroutine(LoadMenu());
+    }
 
     void Update()
     {
