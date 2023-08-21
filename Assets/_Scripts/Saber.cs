@@ -13,6 +13,11 @@ public class Saber : MonoBehaviour
     private float maxCollisionForce = 4000f;
     //private VRTK_ControllerReference controllerReference;
     public GameObject[] SaberMeshes;
+
+    public Transform TipPoint;
+    public Vector3 TipPrevPos;
+    public Vector3 TipDelta;
+    public quaternion targetRotation;
     public void SetSaberVisibility(bool x)
     {
         for (int i = 0; i < SaberMeshes.Length; i++)
@@ -75,16 +80,17 @@ public class Saber : MonoBehaviour
                 }
             }
         }
-
-        
-
-        if(previousPos!=transform.position){
-            posDelta = previousPos-transform.position;
-            slicer.transform.localRotation = Quaternion.LookRotation(Vector3.forward, posDelta)*Quaternion.Euler(0, 0, 90);
-        }
-        
-
         previousPos = transform.position;
+    }
+
+    public void LateUpdate(){
+        if(TipPrevPos!=TipPoint.transform.position){
+            TipDelta = TipPrevPos-TipPoint.transform.position;
+            targetRotation = Quaternion.LookRotation(slicer.transform.forward, TipDelta)*Quaternion.Euler(0, 0, 90);
+            TipPrevPos = TipPoint.transform.position;
+        }
+
+        slicer.transform.rotation = Quaternion.Slerp(slicer.transform.rotation, targetRotation, Time.deltaTime*50);
     }
 
     private void SliceObject(Transform hittedObject)
