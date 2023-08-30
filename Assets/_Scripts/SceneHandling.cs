@@ -16,6 +16,7 @@ public class SceneHandling : MonoBehaviour
     GameObject RightShaft;
     GameObject RightModel;
 
+   
     void EnsureControllers()
     {
         LeftController = GameObject.FindWithTag("LeftController");
@@ -50,6 +51,7 @@ public class SceneHandling : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 300;
         if (!IsSceneLoaded("Menu"))
         {
             StartCoroutine(LoadScene("Menu", LoadSceneMode.Additive));
