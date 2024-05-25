@@ -157,7 +157,7 @@ public class OptionsMenuNew : MonoBehaviour {
 
 		// check texture quality
 		if(PlayerPrefs.GetInt("Textures") == 0){
-			QualitySettings.masterTextureLimit = 2;
+			QualitySettings.globalTextureMipmapLimit = 2;
 			texturelowtext.GetComponent<Text>().text = "LOW";
 			texturemedtext.GetComponent<Text>().text = "med";
 			texturehightext.GetComponent<Text>().text = "high";
@@ -166,7 +166,7 @@ public class OptionsMenuNew : MonoBehaviour {
 			texturehightextLINE.gameObject.SetActive(false);
 		}
 		else if(PlayerPrefs.GetInt("Textures") == 1){
-			QualitySettings.masterTextureLimit = 1;
+			QualitySettings.globalTextureMipmapLimit = 1;
 			texturelowtext.GetComponent<Text>().text = "low";
 			texturemedtext.GetComponent<Text>().text = "MED";
 			texturehightext.GetComponent<Text>().text = "high";
@@ -175,7 +175,7 @@ public class OptionsMenuNew : MonoBehaviour {
 			texturehightextLINE.gameObject.SetActive(false);
 		}
 		else if(PlayerPrefs.GetInt("Textures") == 2){
-			QualitySettings.masterTextureLimit = 0;
+			QualitySettings.globalTextureMipmapLimit = 0;
 			texturelowtext.GetComponent<Text>().text = "low";
 			texturemedtext.GetComponent<Text>().text = "med";
 			texturehightext.GetComponent<Text>().text = "HIGH";
@@ -355,7 +355,7 @@ public class OptionsMenuNew : MonoBehaviour {
 
 	public void  TexturesLow (){
 		PlayerPrefs.SetInt("Textures",0);
-		QualitySettings.masterTextureLimit = 2;
+		QualitySettings.globalTextureMipmapLimit = 2;
 		texturelowtext.GetComponent<Text>().text = "LOW";
 		texturemedtext.GetComponent<Text>().text = "med";
 		texturehightext.GetComponent<Text>().text = "high";
@@ -366,7 +366,7 @@ public class OptionsMenuNew : MonoBehaviour {
 
 	public void  TexturesMed (){
 		PlayerPrefs.SetInt("Textures",1);
-		QualitySettings.masterTextureLimit = 1;
+		QualitySettings.globalTextureMipmapLimit = 1;
 		texturelowtext.GetComponent<Text>().text = "low";
 		texturemedtext.GetComponent<Text>().text = "MED";
 		texturehightext.GetComponent<Text>().text = "high";
@@ -377,7 +377,7 @@ public class OptionsMenuNew : MonoBehaviour {
 
 	public void  TexturesHigh (){
 		PlayerPrefs.SetInt("Textures",2);
-		QualitySettings.masterTextureLimit = 0;
+		QualitySettings.globalTextureMipmapLimit = 0;
 		texturelowtext.GetComponent<Text>().text = "low";
 		texturemedtext.GetComponent<Text>().text = "med";
 		texturehightext.GetComponent<Text>().text = "HIGH";
